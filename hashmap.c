@@ -48,9 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
     else {
         while (map->buckets[i]->key != NULL && is_equal(map->buckets[i]->key,key) != 1){
-            i++;
-            if(i == map->capacity)
-                i = 0;
+            i = (i+1)%map->capacity;
         }
         if(map->buckets[i]->key != NULL)
         {
