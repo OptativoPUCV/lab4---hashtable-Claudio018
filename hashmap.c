@@ -46,7 +46,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     {
         map->buckets[i] = createPair(key,value);
     }else {
-        while (map->buckets[i]->key != NULL && strcmp(map->buckets[i->key],key)!= 0){
+        while (map->buckets[i]->key != NULL && strcmp(map->buckets[i]->key,key)!= 0){
             i++;
         }
         map->buckets[i] = createPair(key,value);
