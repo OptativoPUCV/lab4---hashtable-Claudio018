@@ -23,3 +23,28 @@ Sat 15 Apr 2023 11:46:32 PM UTC:
  tests:  1|5
 total_score: 10/70
 8af62d5
+Sun 16 Apr 2023 12:02:45 AM UTC: 
+ hashmap.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:12: error: request for member ‘buckets’ in something not a structure or union
+   44 |     if(hash->buckets[i]->key == NULL)
+      |            ^~
+hashmap.c:46:20: error: request for member ‘buckets’ in something not a structure or union
+   46 |         strcpy(hash->buckets[i]->key,key);
+      |                    ^~
+hashmap.c:47:13: error: request for member ‘buckets’ in something not a structure or union
+   47 |         hash->buckets[i]->value = value;
+      |             ^~
+hashmap.c:49:20: error: request for member ‘buckets’ in something not a structure or union
+   49 |         while (hash->buckets[i]->key != NULL){
+      |                    ^~
+hashmap.c:52:20: error: request for member ‘buckets’ in something not a structure or union
+   52 |         strcpy(hash->buckets[i]->key,key);
+      |                    ^~
+hashmap.c:53:13: error: request for member ‘buckets’ in something not a structure or union
+   53 |         hash->buckets[i]->value = value;
+      |             ^~
+Compilation failed
+1b79761
