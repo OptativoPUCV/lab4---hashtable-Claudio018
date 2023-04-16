@@ -52,7 +52,14 @@ void insertMap(HashMap * map, char * key, void * value) {
             if(i == map->capacity)
                 i = 0;
         }
-        map->buckets[i] = createPair(key,value);
+        if(map->buckets[i]->key != NULL)
+        {
+            map->buckets[i]->value = value;
+        }
+        else{
+            map->buckets[i] = createPair(key,value);
+        }
+        
     }
     map->current = i;
     (map->size)++;
