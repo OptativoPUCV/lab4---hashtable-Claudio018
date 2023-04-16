@@ -52,6 +52,8 @@ void insertMap(HashMap * map, char * key, void * value) {
         strcpy(map->buckets[i]->key,key);
         map->buckets[i]->value = value;
     }
+    map->current = i;
+    (map->size)++;
 
 }
 
