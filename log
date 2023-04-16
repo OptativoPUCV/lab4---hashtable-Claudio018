@@ -48,3 +48,8 @@ hashmap.c:53:13: error: request for member ‘buckets’ in something not a stru
       |             ^~
 Compilation failed
 1b79761
+Sun 16 Apr 2023 12:03:19 AM UTC: 
+ hashmap.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+ tests:  0|0
+e2d902d
