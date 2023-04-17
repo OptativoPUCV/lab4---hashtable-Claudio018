@@ -224,3 +224,14 @@ In file included from test.c:3:
 cc1: all warnings being treated as errors
 Compilation failed
 935d758
+Mon 17 Apr 2023 12:14:26 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:32: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   86 |         if(map->buckets[i]->key, NULL == 0) return NULL;
+      |                                ^
+cc1: all warnings being treated as errors
+Compilation failed
+bb5f843
