@@ -209,3 +209,18 @@ Mon 17 Apr 2023 12:11:22 AM UTC:
  tests:  6|4
 total_score: 30/70
 ea36a75
+Mon 17 Apr 2023 12:14:10 AM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:12: error: argument 2 null where non-null expected [-Werror=nonnull]
+   86 |         if(strcmp(map->buckets[i]->key, NULL) == 0) return NULL;
+      |            ^~~~~~
+In file included from test.c:3:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/string.h:156:12: note: in a call to function ‘strcmp’ declared ‘nonnull’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |            ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+935d758
