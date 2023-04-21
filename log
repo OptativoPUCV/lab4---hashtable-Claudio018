@@ -294,3 +294,13 @@ hashmap.c:89:11: error: expected expression before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 3f77486
+Fri 21 Apr 2023 02:52:56 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:89:11: error: expected expression before ‘)’ token
+   89 |     while()
+      |           ^
+Compilation failed
+77ddd9b
