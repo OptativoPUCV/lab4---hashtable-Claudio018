@@ -422,3 +422,14 @@ Fri 21 Apr 2023 06:38:44 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 25f07a7
+Fri 21 Apr 2023 06:41:06 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:70:16: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+   70 |         if (aux->buckets[i]->key != NULL)
+      |                ^~
+      |                ->
+Compilation failed
+93ad237
