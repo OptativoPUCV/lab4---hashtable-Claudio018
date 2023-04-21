@@ -128,5 +128,6 @@ Pair * nextMap(HashMap * map) {
     int i = map->current + 1;
     while(map->buckets[i] == NULL && map->buckets[i]->key == NULL )
         i++;
-    return NULL;
+    map->current = i;
+    return map->buckets[i];
 }
