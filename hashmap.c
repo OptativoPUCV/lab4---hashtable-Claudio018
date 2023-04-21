@@ -42,10 +42,9 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
     long i = hash(key,map->capacity);
 
-    while(map->buckets[i]->key != NULL || map->buckets[i] != NULL)
+    while(map->buckets[i]->key != NULL && map->buckets[i] != NULL)
     {
         //if (i > map->capacity) enlarge(map);
-        
         if(is_equal(map->buckets[i]->key,key) == 1){
             return;
         } 
