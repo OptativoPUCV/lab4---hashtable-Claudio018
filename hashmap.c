@@ -116,11 +116,17 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+    int i = 0;
+    while(map->buckets[i] == NULL && map->buckets[i]->key == NULL )
+        i++;
+    map->current = i;
+    return map->buckets[i];
+    
 }
 
 Pair * nextMap(HashMap * map) {
-
+    int i = map->current + 1;
+    while(map->buckets[i] == NULL && map->buckets[i]->key == NULL )
+        i++;
     return NULL;
 }
