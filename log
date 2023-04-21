@@ -245,3 +245,23 @@ Mon 17 Apr 2023 12:15:11 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 cab00b2
+Fri 21 Apr 2023 02:46:08 PM UTC: 
+ hashmap.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:83:79: error: expected ‘)’ before ‘{’ token
+   83 |     while((map->buckets[i] != NULL && is_equal(map->buckets[i]->key,key) != 1)
+      |          ~                                                                    ^
+      |                                                                               )
+   84 |     {
+      |     ~                                                                          
+hashmap.c:92:1: error: expected expression before ‘}’ token
+   92 | }
+      | ^
+hashmap.c:92:1: error: control reaches end of non-void function [-Werror=return-type]
+   92 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e5847f5
