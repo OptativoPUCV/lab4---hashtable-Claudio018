@@ -125,11 +125,12 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-    
     if (map->current > map->capacity) return NULL;
     int i = (map->current) + 1;
-    while(map->buckets[i] == NULL || map->buckets[i]->key == NULL )
+    while(map->buckets[i] == NULL || map->buckets[i]->key == NULL ){
         i++;
+        if (i >= map->capacity) return NULL;
+    }
     map->current = i;
     return map->buckets[i];
     
