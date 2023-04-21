@@ -533,3 +533,21 @@ Fri 21 Apr 2023 07:07:53 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 78e59a9
+Fri 21 Apr 2023 07:08:37 PM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:9: error: ‘is_eq’ undeclared (first use in this function); did you mean ‘is_equal’?
+   48 |         is_eq
+      |         ^~~~~
+      |         is_equal
+hashmap.c:48:9: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:48:14: error: expected ‘;’ before ‘if’
+   48 |         is_eq
+      |              ^
+      |              ;
+   49 |         if(is_equal(map->buckets[i]->key,key) == 1){
+      |         ~~    
+Compilation failed
+20ba13e
